@@ -1,15 +1,18 @@
 //your code here
 
-var todovalue= document.getelementById("newTodoInput");
-var btn=document.getelementById("addTodoBtn");
-var btn=document.getelementById("todoList");
+var todoValue = document.getElementById("newTodoInput");
+var btn = document.getElementById("addTodoBtn");
+var ol = document.getElementById("todoList");
 
 function addTodo() {
-	if(todoValue.value){
-		var li=document.createElement('li');
-		li.textContent=todoValue.value;
-		ol.appenChild(li);
-		todoValue.value="";
-	}
+  //alert(todoValue.value);
+  if (todoValue.value) {
+    // we need to create a li
+    var li = document.createElement("li");
+    li.textContent = todoValue.value;
+    ol.appendChild(li);
+    todoValue.value = "";
+  }
 }
-btn.addEventListener('click',addTodo);
+
+btn.addEventListener("click", addTodo);
